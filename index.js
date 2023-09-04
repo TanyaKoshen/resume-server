@@ -18,7 +18,7 @@ app.use(errorMiddleware);
 
 const start = async () => {
   try {
-    await mongoose.connect('mongodb+srv://tanyakoshen:W4umPCfl20ZvNd5l@cluster0.qu0uyp9.mongodb.net/server-align',
+    await mongoose.connect(process.env.mongoDB,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true
